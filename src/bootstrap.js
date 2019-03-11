@@ -7,6 +7,7 @@ import App from './components/app';
 import reducers from './reducers';
 
 import AddBook from './components/addBook'
+import DeleteLanding from './components/deleteLanding'
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -26,6 +27,7 @@ function main() {
         <div>
           <Route exact path='/' component={App} />
           <Route path='/add_book' component={AddBook} />
+          <Route path='/deleted_book' component={DeleteLanding} />
         </div>
       </div>
       </BrowserRouter>
