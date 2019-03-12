@@ -8,6 +8,7 @@ import reducers from './reducers';
 
 import AddBook from './components/addBook'
 import DeleteLanding from './components/deleteLanding'
+import ViewBook from './components/viewBook'
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -28,6 +29,7 @@ function main() {
           <Route exact path='/' component={App} />
           <Route path='/add_book' component={AddBook} />
           <Route path='/deleted_book' component={DeleteLanding} />
+          <Route path='/view_book/:id' component={ViewBook} />
         </div>
       </div>
       </BrowserRouter>

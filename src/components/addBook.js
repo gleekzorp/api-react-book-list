@@ -43,6 +43,8 @@ export default class AddBook extends Component {
     render() {
         return (
             <div className="books">
+            {console.log(this.props)}
+
                 <h1>Add a book below</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title</label>
