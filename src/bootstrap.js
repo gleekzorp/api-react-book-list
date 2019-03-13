@@ -6,9 +6,10 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import App from './components/app';
 import reducers from './reducers';
 
-import AddBook from './components/addBook'
-import DeleteLanding from './components/deleteLanding'
-import ViewBook from './components/viewBook'
+import AddBook from './components/addBook';
+import DeleteLanding from './components/deleteLanding';
+import ViewBook from './components/viewBook';
+import UpdateBook from './components/updateBook';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 

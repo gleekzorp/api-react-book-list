@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DeleteAction from './deleteAction';
+import UpdateBook from './updateBook';
 
 export default class ViewBook extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class ViewBook extends Component {
 
   render() {
     return (
-      <div className='app'>
+      <div className=''>
         <h1>Book information</h1>
         <div>ID: {this.state.singleBook[0]}</div>
         <div>Title: {this.state.singleBook[1]}</div>
@@ -37,6 +38,7 @@ export default class ViewBook extends Component {
         {/* {console.log(this.props)} */}
         {/* {console.log(this.state.singleBook)} */}
         <DeleteAction id={this.state.singleBook[0]} />
+        <UpdateBook ourProp={this.state.singleBook}/>
       </div>
     );
   }
