@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function DeleteAction(props) {
     function bookDelete() {
-        fetch(`http://localhost:5000/delete/${props.id}`, {
+        fetch(`https://book-api-practice-df.herokuapp.com/delete/${props.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

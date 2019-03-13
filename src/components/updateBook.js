@@ -40,7 +40,7 @@ class UpdateBook extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch(`http://localhost:5000/update_book/${this.state.id}`, {
+        fetch(`https://book-api-practice-df.herokuapp.com/update_book/${this.state.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
