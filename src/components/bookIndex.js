@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DeleteAction from './deleteAction';
 import { Link } from 'react-router-dom';
 
+import {Title} from '../style/primitives'
+
 export default class BookIndex extends Component {
     constructor(props) {
         super(props)
@@ -28,7 +30,7 @@ export default class BookIndex extends Component {
     render() {
         return (
             <div className="books">
-                <h1>List of books</h1>
+                <Title>List of books</Title>
                 {/* {console.log(this.state.books)} */}
                 <div>{this.state.books.map((book) => (
                     // console.log(book)
