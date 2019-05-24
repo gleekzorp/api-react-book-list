@@ -10,6 +10,7 @@ import AddBook from './components/addBook';
 import DeleteLanding from './components/deleteLanding';
 import ViewBook from './components/viewBook';
 import UpdateBook from './components/updateBook';
+import { FlexArea, NavBar } from './style/primitives'
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -22,10 +23,12 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
       <div>
-        <div className='nav'>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/add_book'>AddBook</NavLink>
-        </div>
+        <NavBar>
+          <FlexArea justifyContent="space-evenly">
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/add_book'>AddBook</NavLink>
+          </FlexArea>
+        </NavBar>
         <div>
           <Route exact path='/' component={App} />
           <Route path='/add_book' component={AddBook} />

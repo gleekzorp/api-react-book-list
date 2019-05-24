@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DeleteAction from './deleteAction';
 import { Link } from 'react-router-dom';
 
+import { Title, Subtitle, FlexArea, BookCard } from '../style/primitives'
+
 export default class BookIndex extends Component {
     constructor(props) {
         super(props)
@@ -28,17 +30,17 @@ export default class BookIndex extends Component {
     render() {
         return (
             <div className="books">
-                <h1>List of books</h1>
-                {/* {console.log(this.state.books)} */}
-                <div>{this.state.books.map((book) => (
-                    // console.log(book)
-                    <div key={book[0]}>
-                        <h2>Book Title: {book[1]}</h2>
+                <Title color="blue">List of books</Title>
+                <FlexArea flexDirection="column" alignItems="center">{this.state.books.map((book) => (
+                    <BookCard key={book[0]}>
+                        <Subtitle>Book Title: {book[1]}</Subtitle>
                         <h3>Author: {book[2]}</h3>
-                        <DeleteAction id={book[0]} />
-                        <Link to={`/view_book/${book[0]}`}>View Book</Link>
-                    </div>
-                ))}</div>
+                        <FlexArea justifyContent="space-evenly">
+                            <DeleteAction id={book[0]} />
+                            <Link to={`/view_book/${book[0]}`}>View Book</Link>
+                        </FlexArea>
+                    </BookCard>
+                ))}</FlexArea>
             </div>
         )
     }
