@@ -30,7 +30,7 @@ export default class BookIndex extends Component {
             <div className="books">
                 <h1>List of books</h1>
                 {/* {console.log(this.state.books)} */}
-                <h2>{this.state.books.map((book) => (
+                <div>{this.state.books.map((book) => (
                     // console.log(book)
                     <div key={book[0]}>
                         <h2>Book Title: {book[1]}</h2>
@@ -38,7 +38,7 @@ export default class BookIndex extends Component {
                         <DeleteAction id={book[0]} />
                         <Link to={`/view_book/${book[0]}`}>View Book</Link>
                     </div>
-                ))}</h2>
+                ))}</div>
             </div>
         )
     }
